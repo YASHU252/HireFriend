@@ -1,0 +1,246 @@
+/* ── Shell ────────────────────────────────────────────────────── */
+.setup-page {
+  min-height: 100vh;
+  background: var(--bg, #0b0b14);
+  color: var(--text-primary, #e8e8f8);
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.page-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(130px);
+}
+.page-glow.one { width: 480px; height: 480px; background: rgba(108,99,255,0.18); top: -80px; left: -100px; }
+.page-glow.two { width: 380px; height: 380px; background: rgba(56,189,248,0.13); bottom: 40px; right: -80px; }
+
+.setup-container {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+/* ── Header ───────────────────────────────────────────────────── */
+.setup-header { text-align: center; margin-bottom: 2.5rem; }
+
+.tag-pill {
+  display: inline-block;
+  background: rgba(108,99,255,0.15);
+  border: 1px solid rgba(108,99,255,0.35);
+  color: #a5a0ff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 99px;
+  margin-bottom: 0.6rem;
+}
+
+.setup-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.03em;
+}
+
+.setup-sub {
+  font-size: 0.95rem;
+  color: rgba(220,220,255,0.5);
+  margin: 0;
+}
+
+/* ── Section ──────────────────────────────────────────────────── */
+.setup-section { margin-bottom: 2rem; }
+
+.setup-section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(220,220,255,0.45);
+  margin: 0 0 0.9rem;
+}
+
+/* ── Domain grid ──────────────────────────────────────────────── */
+.domain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.domain-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 0.75rem;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgba(220,220,255,0.65);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+}
+.domain-card:hover {
+  background: rgba(108,99,255,0.1);
+  border-color: rgba(108,99,255,0.3);
+  color: #c8c0ff;
+  transform: translateY(-2px);
+}
+.domain-card.selected {
+  background: rgba(108,99,255,0.18);
+  border-color: rgba(108,99,255,0.6);
+  color: #a5a0ff;
+  box-shadow: 0 0 20px rgba(108,99,255,0.2);
+}
+.domain-icon  { font-size: 1.5rem; }
+.domain-label { font-size: 0.8rem; }
+
+/* ── Difficulty row ────────────────────────────────────────────── */
+.difficulty-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.difficulty-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.3rem 1rem;
+  background: rgba(255,255,255,0.04);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgba(220,220,255,0.65);
+  text-align: center;
+}
+.difficulty-card:hover {
+  background: rgba(108,99,255,0.1);
+  border-color: rgba(108,99,255,0.3);
+  transform: translateY(-2px);
+}
+.difficulty-card.selected {
+  background: rgba(108,99,255,0.18);
+  border-color: rgba(108,99,255,0.6);
+  color: #a5a0ff;
+  box-shadow: 0 0 20px rgba(108,99,255,0.2);
+}
+.diff-emoji { font-size: 1.6rem; }
+.diff-label { font-size: 0.95rem; font-weight: 700; color: inherit; }
+.diff-desc  { font-size: 0.72rem; color: rgba(220,220,255,0.4); line-height: 1.4; }
+
+/* ── Device check ─────────────────────────────────────────────── */
+.device-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+.device-card {
+  padding: 1.2rem;
+  border-radius: 14px;
+  border: 1.5px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  transition: border-color 0.2s;
+}
+.device-card.ok { border-color: rgba(52,211,153,0.4); background: rgba(52,211,153,0.06); }
+
+.device-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.device-icon  { font-size: 1.5rem; flex-shrink: 0; }
+.device-name  { font-size: 0.9rem; font-weight: 600; margin: 0 0 0.15rem; color: rgba(220,220,255,0.9); }
+.device-status{ font-size: 0.75rem; color: rgba(220,220,255,0.4); margin: 0; }
+
+.device-btn {
+  margin-left: auto;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(108,99,255,0.4);
+  background: rgba(108,99,255,0.12);
+  color: #a5a0ff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+  white-space: nowrap;
+}
+.device-btn:hover { background: rgba(108,99,255,0.25); }
+.device-btn.granted {
+  border-color: rgba(52,211,153,0.4);
+  background: rgba(52,211,153,0.1);
+  color: #34d399;
+}
+
+.cam-preview {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 0.85rem;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  transform: scaleX(-1);
+  background: #000;
+}
+
+.device-err {
+  margin: 0.6rem 0 0;
+  font-size: 0.75rem;
+  color: #f87171;
+}
+
+/* ── Footer ──────────────────────────────────────────────────── */
+.setup-footer { text-align: center; margin-top: 1rem; }
+
+.setup-hint {
+  font-size: 0.82rem;
+  color: rgba(220,220,255,0.4);
+  margin: 0 0 0.9rem;
+}
+
+.cta-button.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #6c63ff 0%, #3b82f6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  text-decoration: none;
+}
+.cta-button.primary:hover:not(:disabled) {
+  opacity: 0.88;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(108,99,255,0.35);
+}
+.cta-button.primary.disabled,
+.cta-button.primary:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .domain-grid     { grid-template-columns: repeat(2, 1fr); }
+  .difficulty-row  { grid-template-columns: 1fr; }
+  .device-row      { grid-template-columns: 1fr; }
+}

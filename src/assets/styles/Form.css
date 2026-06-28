@@ -1,0 +1,227 @@
+.form-page {
+  position: relative;
+  min-height: 100vh;
+  padding: clamp(2rem, 6vw, 4rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  color: inherit;
+}
+
+.form-page .form-glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  pointer-events: none;
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.form-page .glow-one {
+  top: -160px;
+  left: -120px;
+  background: rgba(57, 175, 237, 0.45);
+}
+
+.form-page .glow-two {
+  bottom: -140px;
+  right: -80px;
+  background: rgba(61, 229, 187, 0.4);
+  animation-delay: 1.8s;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  padding: clamp(2rem, 5vw, 3rem);
+  box-shadow: 0 30px 60px rgba(25, 91, 108, 0.15);
+  backdrop-filter: blur(18px);
+  position: relative;
+  z-index: 1;
+}
+
+body.dark-theme .glass-card {
+  background: rgba(10, 18, 28, 0.7);
+  box-shadow: 0 24px 50px rgba(25, 189, 175, 0.2);
+}
+
+.form-header {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.form-header h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.8vw, 2.4rem);
+  line-height: 1.1;
+}
+
+.form-header p {
+  margin: 0;
+  color: rgba(13, 43, 42, 0.7);
+  font-size: 1rem;
+}
+
+body.dark-theme .form-header p {
+  color: rgba(214, 254, 247, 0.75);
+}
+
+.form-pill {
+  align-self: flex-start;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(31, 170, 152, 0.18);
+  color: #0c5353;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.dark-theme .form-pill {
+  background: rgba(114, 255, 229, 0.2);
+  color: #c6fff6;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: rgba(13, 43, 42, 0.75);
+}
+
+body.dark-theme .input-group label {
+  color: rgba(214, 254, 247, 0.8);
+}
+
+.input-group input {
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(17, 80, 76, 0.12);
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  color: inherit;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.dark-theme .input-group input {
+  background: rgba(12, 24, 34, 0.7);
+  border-color: rgba(151, 255, 239, 0.18);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: rgba(37, 183, 159, 0.7);
+  box-shadow: 0 0 0 4px rgba(37, 183, 159, 0.18);
+}
+
+.cta-button.full-width {
+  width: 100%;
+  justify-content: center;
+}
+
+.form-message {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #14504a;
+}
+
+body.dark-theme .form-message {
+  color: #8effe1;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+.form-footer a {
+  color: #0f776a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+body.dark-theme .form-footer a {
+  color: #8effe1;
+}
+
+.form-side-card {
+  position: relative;
+  z-index: 1;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 20px 46px rgba(23, 92, 101, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+body.dark-theme .form-side-card {
+  background: rgba(11, 22, 32, 0.65);
+  box-shadow: 0 20px 46px rgba(36, 203, 192, 0.18);
+}
+
+.form-side-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.form-side-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  font-size: 0.95rem;
+  color: rgba(13, 43, 42, 0.7);
+}
+
+.form-side-card li::before {
+  content: '•';
+  color: #21b7a0;
+  margin-right: 0.6rem;
+  font-weight: bold;
+}
+
+body.dark-theme .form-side-card ul {
+  color: rgba(207, 252, 244, 0.7);
+}
+
+@media (max-width: 920px) {
+  .form-page {
+    grid-template-columns: 1fr;
+  }
+
+  .form-side-card {
+    order: -1;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}

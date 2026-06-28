@@ -1,0 +1,220 @@
+@keyframes shimmer {
+  0% {
+    background-position: -450px 0;
+  }
+  100% {
+    background-position: 450px 0;
+  }
+}
+
+.interview-page {
+  color: inherit;
+}
+
+.interview-header {
+  max-width: 820px;
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.interview-header h1 {
+  margin: 0;
+  font-size: clamp(2.25rem, 4.6vw, 3rem);
+  line-height: 1.1;
+}
+
+.interview-header h1 span {
+  color: #1f8276;
+}
+
+body.dark-theme .interview-header h1 span {
+  color: #8fffe8;
+}
+
+.interview-header p {
+  margin: 0;
+  max-width: 640px;
+  font-size: 1.05rem;
+  color: rgba(13, 43, 42, 0.7);
+}
+
+body.dark-theme .interview-header p {
+  color: rgba(219, 255, 249, 0.7);
+}
+
+.interview-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 2fr) minmax(260px, 1fr);
+  gap: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 3.5rem;
+}
+
+.upload-panel {
+  padding: clamp(1.8rem, 5vw, 2.5rem);
+  border-radius: 24px;
+}
+
+.upload-header h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.6rem;
+}
+
+.upload-header p {
+  margin: 0;
+  color: rgba(13, 43, 42, 0.65);
+}
+
+body.dark-theme .upload-header p {
+  color: rgba(209, 255, 246, 0.7);
+}
+
+.upload-dropzone {
+  margin-top: 1.8rem;
+  padding: clamp(1.8rem, 5vw, 2.4rem);
+  border-radius: 20px;
+  border: 2px dashed rgba(22, 107, 116, 0.18);
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.upload-dropzone:hover {
+  border-color: rgba(33, 183, 159, 0.4);
+  transform: translateY(-4px);
+}
+
+.upload-dropzone.has-file {
+  border-style: solid;
+}
+
+body.dark-theme .upload-dropzone {
+  background: rgba(12, 24, 34, 0.6);
+  border-color: rgba(150, 255, 237, 0.18);
+}
+
+.dropzone-icon {
+  font-size: 2rem;
+}
+
+.upload-dropzone p {
+  margin: 0 0 0.3rem;
+  font-weight: 600;
+}
+
+.upload-dropzone span {
+  color: rgba(13, 43, 42, 0.6);
+  font-size: 0.95rem;
+}
+
+body.dark-theme .upload-dropzone span {
+  color: rgba(211, 252, 244, 0.68);
+}
+
+.file-chip {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, rgba(33, 183, 159, 0.2), rgba(68, 129, 235, 0.15));
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  color: #14504a;
+}
+
+body.dark-theme .file-chip {
+  color: #8fffe8;
+  background: linear-gradient(135deg, rgba(25, 143, 128, 0.32), rgba(74, 124, 224, 0.28));
+}
+
+.upload-actions {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.upload-actions .cta-button {
+  min-width: 180px;
+  justify-content: center;
+}
+
+.insight-panel {
+  padding: clamp(1.6rem, 4vw, 2.2rem);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.insight-panel h3 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.insight-panel ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: rgba(13, 43, 42, 0.75);
+}
+
+.insight-panel li {
+  position: relative;
+}
+
+.insight-panel li::marker {
+  color: #1f8276;
+}
+
+.insight-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(33, 183, 159, 0), rgba(33, 183, 159, 0.4), rgba(33, 183, 159, 0));
+}
+
+.feature-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-highlight .feature-card {
+  padding: 1.6rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.feature-highlight .feature-icon {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 960px) {
+  .interview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .upload-dropzone {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .upload-actions {
+    flex-direction: column;
+  }
+
+  .upload-actions .cta-button {
+    width: 100%;
+  }
+}
