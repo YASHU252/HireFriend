@@ -1,7 +1,7 @@
 {
-  "name": "visionhire-backend",
+  "name": "hirefriend-backend",
   "version": "1.0.0",
-  "description": "VisionHire AI Interview Platform — Backend",
+  "description": "HireFriend AI Interview Platform — Backend",
   "main": "server.js",
   "type": "module",
   "scripts": {

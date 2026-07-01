@@ -1,13 +1,11 @@
+import './loadEnv.js'; // must be the first import — see file for why
 import express from 'express';
-import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDB from './lib/db.js';
 import authRoutes from './routes/auth.routes.js';
 import interviewRoutes from './routes/interview.routes.js';
 import userRoutes from './routes/user.routes.js';
 import authMiddleware from './middleware/authMiddleware.js';
-
-dotenv.config();
 
 const app = express();
 

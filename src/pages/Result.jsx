@@ -1,7 +1,7 @@
 import '../assets/styles/Result.css';
 import { useEffect, useMemo, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { fetchInterviewResult } from '../services/api';
+import { getInterviewResult } from '../services/api';
 
 const MAX_POSSIBLE_QUESTIONS = 15;
 
@@ -28,7 +28,7 @@ function Result({ darkMode }) {
     if (!id) return;
     try {
       if (typeof window !== 'undefined') {
-        sessionStorage.setItem('visionhire-last-interview-id', id);
+        sessionStorage.setItem('hirefriend-last-interview-id', id);
       }
     } catch (err) {
       console.warn('Unable to persist interview id:', err);
@@ -38,7 +38,7 @@ function Result({ darkMode }) {
   const readStoredInterviewId = () => {
     try {
       if (typeof window === 'undefined') return null;
-      return sessionStorage.getItem('visionhire-last-interview-id');
+      return sessionStorage.getItem('hirefriend-last-interview-id');
     } catch (err) {
       console.warn('Unable to read stored interview id:', err);
       return null;
@@ -63,7 +63,7 @@ function Result({ darkMode }) {
       }
 
       setLoading(true);
-      const data = await fetchInterviewResult(interviewId);
+      const data = await getInterviewResult(interviewId);
       if (!data) {
         setError('Unable to load interview summary right now. Try again later.');
       } else {
@@ -110,7 +110,7 @@ function Result({ darkMode }) {
           </h1>
           <p>
             {message ||
-              'Here is the breakdown of your latest VisionHire session with AI score rationales and per-question insights.'}
+              'Here is the breakdown of your latest HireFriend session with AI score rationales and per-question insights.'}
           </p>
         </header>
 

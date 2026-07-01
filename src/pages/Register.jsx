@@ -56,7 +56,7 @@ function Register() {
       <div className="form-card glass-surface">
         <div className="form-brand">
           <span className="form-brand-icon">🌌</span>
-          <h1>VisionHire</h1>
+          <h1>HireFriend</h1>
         </div>
 
         <h2 className="form-title">Create your account</h2>

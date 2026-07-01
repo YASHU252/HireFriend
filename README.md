@@ -55,7 +55,7 @@ npm run dev
 |----------------|-------------|
 | `MONGO_URI`    | MongoDB connection string |
 | `GEMINI_API_KEY` | Google AI Studio API key |
-| `GEMINI_MODEL` | `gemini-1.5-flash` (default) |
+| `GEMINI_MODEL` | `gemini-2.5-flash` (default) |
 | `JWT_SECRET`   | Long random string for signing tokens |
 | `PORT`         | Express port (default 5000) |
 | `CLIENT_URL`   | Frontend origin for CORS (default http://localhost:5173) |

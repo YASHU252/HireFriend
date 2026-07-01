@@ -85,8 +85,8 @@ function Setup() {
     if (!canProceed) return;
     // Stop the preview stream — InterviewStart will open its own
     streamRef.current?.getTracks().forEach((t) => t.stop());
-    sessionStorage.setItem('visionhire-domain',     selectedDomain);
-    sessionStorage.setItem('visionhire-difficulty', selectedDifficulty);
+    sessionStorage.setItem('hirefriend-domain',     selectedDomain);
+    sessionStorage.setItem('hirefriend-difficulty', selectedDifficulty);
     navigate('/interview-start', {
       state: { domain: selectedDomain, difficulty: selectedDifficulty },
     });
@@ -99,7 +99,7 @@ function Setup() {
 
       <div className="setup-container">
         <div className="setup-header">
-          <span className="tag-pill">Step 3 of 3</span>
+          <span className="setup-pill">Step 3 of 3</span>
           <h1>Configure your session</h1>
           <p className="setup-sub">Choose a domain, pick your difficulty, then verify camera and mic.</p>
         </div>
@@ -145,7 +145,7 @@ function Setup() {
           <div className="device-row">
 
             {/* Camera */}
-            <div className={`device-card glass-surface${camOk ? ' ok' : ''}`}>
+            <div className={`device-card${camOk ? ' ok' : ''}`}>
               <div className="device-top">
                 <span className="device-icon">{camOk ? '✅' : '📷'}</span>
                 <div>
@@ -172,7 +172,7 @@ function Setup() {
             </div>
 
             {/* Microphone */}
-            <div className={`device-card glass-surface${micOk ? ' ok' : ''}`}>
+            <div className={`device-card${micOk ? ' ok' : ''}`}>
               <div className="device-top">
                 <span className="device-icon">{micOk ? '✅' : '🎙️'}</span>
                 <div>

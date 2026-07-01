@@ -118,7 +118,7 @@ export default function HomeProfile() {
         {stats && (
           <section className="stats-row">
             {statTiles.map((t) => (
-              <div key={t.label} className="stat-tile glass-surface">
+              <div key={t.label} className="stat-tile dash-glass">
                 <span className="stat-tile-icon">{t.icon}</span>
                 <p className="stat-tile-label">{t.label}</p>
                 <p className={`stat-tile-value${t.small ? ' small' : ''}`}>{t.value}</p>
@@ -129,11 +129,11 @@ export default function HomeProfile() {
 
         {/* ── Quick-start if no sessions ───────────────────────── */}
         {stats?.totalSessions === 0 && (
-          <section className="empty-state glass-surface">
+          <section className="empty-state dash-glass">
             <span className="empty-icon">🚀</span>
             <h2>Run your first interview</h2>
             <p>
-              Upload your resume, pick a domain and difficulty, and VisionHire will
+              Upload your resume, pick a domain and difficulty, and HireFriend will
               generate a personalised mock session powered by Gemini AI.
             </p>
             <button className="dash-cta-btn" onClick={() => navigate('/interview')}>
@@ -150,7 +150,7 @@ export default function HomeProfile() {
               {stats.recentActivity.map((iv) => {
                 const p = pct(iv.score, iv.maxScore);
                 return (
-                  <div key={String(iv.id)} className="recent-card glass-surface">
+                  <div key={String(iv.id)} className="recent-card dash-glass">
                     <span className="recent-domain-icon">{domainIcon(iv.domain)}</span>
                     <p className="recent-domain">{iv.domain}</p>
                     <p className="recent-diff">{iv.difficulty || 'Easy'}</p>
@@ -171,7 +171,7 @@ export default function HomeProfile() {
             {ivLoading ? (
               <div className="iv-loading">Loading…</div>
             ) : (
-              <div className="history-table glass-surface">
+              <div className="history-table dash-glass">
                 <div className="ht-head">
                   <span>Domain</span>
                   <span>Difficulty</span>

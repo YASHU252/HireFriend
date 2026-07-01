@@ -118,8 +118,10 @@
   box-shadow: 0 8px 24px rgba(108, 99, 255, 0.35);
 }
 
-/* ── Glass surface (shared) ───────────────────────────────────────── */
-.glass-surface {
+/* ── Glass surface (dashboard-only — do NOT name this .glass-surface,
+   that class already exists in global.css with an opaque light-theme
+   background and will silently win the cascade) ──────────────────── */
+.dash-glass {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;

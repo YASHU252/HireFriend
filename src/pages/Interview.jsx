@@ -62,12 +62,12 @@ function Interview() {
     const result = await uploadResume(resume);
 
     if (result?.resumeText) {
-      sessionStorage.setItem('visionhire-resume-text', result.resumeText);
+      sessionStorage.setItem('hirefriend-resume-text', result.resumeText);
       setUploadMsg(`Resume parsed — ${result.wordCount} words extracted. ✅`);
       setTimeout(() => navigate('/guidelines'), 700);
     } else {
       // Parsing failed — still allow them to continue without personalisation
-      sessionStorage.removeItem('visionhire-resume-text');
+      sessionStorage.removeItem('hirefriend-resume-text');
       setUploadMsg('Could not parse resume — continuing without personalisation.');
       setTimeout(() => navigate('/guidelines'), 1200);
     }
@@ -79,7 +79,7 @@ function Interview() {
     setResume(null);
     setUploadMsg('');
     setError('');
-    sessionStorage.removeItem('visionhire-resume-text');
+    sessionStorage.removeItem('hirefriend-resume-text');
     if (fileRef.current) fileRef.current.value = '';
   };
 
@@ -94,7 +94,7 @@ function Interview() {
           <span className="tag-pill">Step 1 of 3</span>
           <h1>Upload your resume</h1>
           <p className="interview-subtext">
-            VisionHire reads your experience, skills, and projects to generate questions that
+            HireFriend reads your experience, skills, and projects to generate questions that
             match your actual background — not just generic ones.
           </p>
         </div>

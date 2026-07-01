@@ -13,15 +13,15 @@ export default function InterviewStart() {
   // ── Session config from Setup ────────────────────────────────
   const domain = (
     location.state?.domain ||
-    sessionStorage.getItem('visionhire-domain') ||
+    sessionStorage.getItem('hirefriend-domain') ||
     'full stack web development'
   );
   const difficulty = (
     location.state?.difficulty ||
-    sessionStorage.getItem('visionhire-difficulty') ||
+    sessionStorage.getItem('hirefriend-difficulty') ||
     'medium'
   );
-  const resumeText = sessionStorage.getItem('visionhire-resume-text') || '';
+  const resumeText = sessionStorage.getItem('hirefriend-resume-text') || '';
 
   // ── State ────────────────────────────────────────────────────
   const [question,        setQuestion]        = useState('');
@@ -328,7 +328,7 @@ export default function InterviewStart() {
       {/* ── Top bar ────────────────────────────────────────── */}
       <div className="room-topbar">
         <div className="topbar-brand">
-          <span>🌌</span> VisionHire
+          <span>🌌</span> HireFriend
           <span className="topbar-domain">{domainLabel}</span>
           <span className={`topbar-diff ${diffLabel.cls}`}>{diffLabel.text}</span>
         </div>

@@ -11,7 +11,7 @@ const highlightFeatures = [
   {
     icon: '📄',
     title: 'Resume-Aware Questions',
-    description: 'Upload your CV and VisionHire tailors questions to your actual experience.',
+    description: 'Upload your CV and HireFriend tailors questions to your actual experience.',
   },
   {
     icon: '🎙️',
@@ -26,7 +26,7 @@ const highlightFeatures = [
 ];
 
 const howSteps = [
-  { label: 'Upload Resume',        description: 'Let VisionHire understand your background before questions begin.' },
+  { label: 'Upload Resume',        description: 'Let HireFriend understand your background before questions begin.' },
   { label: 'Pick Domain & Level',  description: 'Six domains, three difficulty levels — Easy, Medium, or Hard.' },
   { label: 'Interview in Real Time', description: 'Voice or keyboard, anti-cheat proctoring, 60-second timer per question.' },
   { label: 'Review & Improve',     description: 'See per-question scores, keywords, and AI rationales instantly.' },
@@ -60,7 +60,7 @@ function Home() {
       <header className="header">
         <div className="logo-wrap">
           <span className="logo-icon">🌌</span>
-          <h1 className="logo">VisionHire</h1>
+          <h1 className="logo">HireFriend</h1>
         </div>
         <div className="nav-buttons">
           {isLoggedIn ? (
@@ -88,7 +88,7 @@ function Home() {
             Ace your next <span>technical interview</span> with AI-powered practice.
           </h2>
           <p>
-            VisionHire blends adaptive questioning, realistic pacing, and instant analytics to help you
+            HireFriend blends adaptive questioning, realistic pacing, and instant analytics to help you
             rehearse like it&apos;s the real thing — every single time.
           </p>
           <div className="hero-actions">
@@ -125,7 +125,7 @@ function Home() {
 
       {/* ── Features ───────────────────────────────────────────────── */}
       <section className="features">
-        <h2>Why candidates choose VisionHire</h2>
+        <h2>Why candidates choose HireFriend</h2>
         <div className="feature-grid">
           {highlightFeatures.map((f) => (
             <div key={f.title} className="feature-card">
@@ -139,7 +139,7 @@ function Home() {
 
       {/* ── How it works ───────────────────────────────────────────── */}
       <section className="how-it-works">
-        <h2>The VisionHire flow</h2>
+        <h2>The HireFriend flow</h2>
         <div className="how-row">
           {howSteps.map((s) => (
             <div key={s.label} className="how-card">
@@ -155,7 +155,7 @@ function Home() {
         <div className="cta-copy">
           <h3>Ready to rehearse your next big opportunity?</h3>
           <p>
-            Join thousands of engineers who rely on VisionHire to sharpen their skills and walk into
+            Join thousands of engineers who rely on HireFriend to sharpen their skills and walk into
             interviews with confidence.
           </p>
         </div>

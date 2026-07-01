@@ -29,7 +29,7 @@
 /* ── Header ───────────────────────────────────────────────────── */
 .setup-header { text-align: center; margin-bottom: 2.5rem; }
 
-.tag-pill {
+.setup-pill {
   display: inline-block;
   background: rgba(108,99,255,0.15);
   border: 1px solid rgba(108,99,255,0.35);
@@ -151,6 +151,8 @@
   border-radius: 14px;
   border: 1.5px solid rgba(255,255,255,0.08);
   background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: border-color 0.2s;
 }
 .device-card.ok { border-color: rgba(52,211,153,0.4); background: rgba(52,211,153,0.06); }

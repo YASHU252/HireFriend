@@ -30,7 +30,7 @@ function Navbar() {
     <nav className="app-navbar">
       <button className="navbar-brand" onClick={() => navigate(isLoggedIn ? '/dashboard' : '/')}>
         <span className="navbar-logo-icon">🌌</span>
-        VisionHire
+        HireFriend
       </button>
 
       <div className="navbar-actions">
