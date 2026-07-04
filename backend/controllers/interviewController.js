@@ -1,10 +1,7 @@
 import Interview from '../models/Interview.js';
 import User from '../models/User.js';
-import dotenv from 'dotenv';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { parseResume } from '../utils/resumeParser.js';
-
-dotenv.config();
 
 // ── Config ──────────────────────────────────────────────────────────────────
 const GEMINI_API_KEY      = (process.env.GEMINI_API_KEY || '').trim();
